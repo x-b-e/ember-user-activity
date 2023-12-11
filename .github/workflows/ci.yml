@@ -21,6 +21,12 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
+      - name: Enable corepack
+        run: |
+          corepack enable
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
           cache: yarn
       - name: Install Dependencies
         run: yarn install --frozen-lockfile
@@ -35,6 +41,12 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - name: Enable corepack
+        run: |
+          corepack enable
       - uses: actions/setup-node@v3
         with:
           node-version: 16
@@ -63,6 +75,12 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - name: Enable corepack
+        run: |
+          corepack enable
       - uses: actions/setup-node@v3
         with:
           node-version: 16
