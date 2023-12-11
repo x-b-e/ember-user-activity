@@ -7,6 +7,9 @@ module.exports = function (defaults) {
     autoImport: {
       watchDependencies: ['ember-user-activity'],
     },
+    'ember-cli-addon-docs': {
+      documentingAddonAt: '../ember-user-activity',
+    },
   });
 
   const { maybeEmbroider } = require('@embroider/test-setup');

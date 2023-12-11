@@ -1,0 +1,40 @@
+<DocsHero @slimHeading="User" @strongHeading="Activity" @byline="Tracking Services for User Actions & Idling"/>
+
+<div class="badges">
+  <a href="https://github.com/elwayman02/ember-user-activity/actions?query=workflow%3ACI" target="_blank" rel="noopener noreferrer">
+    <img src="https://github.com/elwayman02/ember-user-activity/workflows/CI/badge.svg" alt="GitHub Actions">
+  </a>
+  <a href="https://emberobserver.com/addons/ember-user-activity" target="_blank" rel="noopener noreferrer">
+    <img src="https://emberobserver.com/badges/ember-user-activity.svg" alt="EmberObserver">
+  </a>
+  <a href="https://codeclimate.com/github/elwayman02/ember-user-activity" target="_blank" rel="noopener noreferrer">
+    <img src="https://codeclimate.com/github/elwayman02/ember-user-activity/badges/gpa.svg" alt="Codeclimate">
+  </a>
+</div>
+
+<div class="docs-container docs-md">
+  <section class="docs-max-w-md docs-mx-auto docs-pb-8">
+    <div class="description">
+      <p>Scroll, click, or press keys to see events fire!</p>
+
+      <p>
+        <label for="eventInput">Add <a href="https://developer.mozilla.org/en-US/docs/Web/Events" target="_blank" rel="noopener noreferrer">another event</a>:</label>
+        <Input id="eventInput" class="eventInput" @value={{this.newEvent}} @enter={{fn this.addEvent this.newEvent}}/>
+      </p>
+    </div>
+
+    <IdleDisplay />
+
+    <div class="flexContainer">
+      {{#each this.eventNames as |event|}}
+        <EventDisplay @eventName={{event}} @close={{this.removeEvent}} />
+      {{/each}}
+    </div>
+  </section>
+</div>
+
+<footer>
+  <a href="https://www.netlify.com">
+    <img src="https://www.netlify.com/img/global/badges/netlify-light.svg" alt="Deploys by Netlify" />
+  </a>
+</footer>

@@ -22,7 +22,9 @@
     "lint:js:fix": "eslint . --fix",
     "start": "ember serve",
     "test": "concurrently \"npm:lint\" \"npm:test:*\" --names \"lint,test:\"",
-    "test:ember": "ember test"
+    "test:ember": "ember test",
+    "test:ember-compatibility": "ember try:each",
+    "release": "release-it"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.21.3",
@@ -37,6 +39,8 @@
     "concurrently": "^8.0.1",
     "ember-auto-import": "^2.6.3",
     "ember-cli": "~4.12.1",
+    "ember-cli-addon-docs": "^5.2.0",
+    "ember-cli-addon-docs-yuidoc": "^1.0.0",
     "ember-cli-app-version": "^6.0.0",
     "ember-cli-babel": "^7.26.11",
     "ember-cli-dependency-checker": "^3.3.1",
@@ -51,6 +55,8 @@
     "ember-page-title": "^7.0.0",
     "ember-qunit": "^6.2.0",
     "ember-resolver": "^10.0.0",
+    "ember-sinon": "^5.0.0",
+    "ember-sinon-qunit": "^6.0.0",
     "ember-source": "~4.12.0",
     "ember-source-channel-url": "^3.0.0",
     "ember-template-lint": "^5.7.2",

@@ -63,6 +63,15 @@
     "version": 2,
     "type": "addon",
     "main": "addon-main.cjs",
-    "app-js": {}
+    "app-js": {
+      "./services/-private/event-manager.js": "./dist/_app_/services/-private/event-manager.js",
+      "./services/-private/fastboot-aware-event-manager.js": "./dist/_app_/services/-private/fastboot-aware-event-manager.js",
+      "./services/scroll-activity.js": "./dist/_app_/services/scroll-activity.js",
+      "./services/user-activity.js": "./dist/_app_/services/user-activity.js",
+      "./services/user-idle.js": "./dist/_app_/services/user-idle.js",
+      "./utils/get-scroll.js": "./dist/_app_/utils/get-scroll.js",
+      "./utils/storage-available.js": "./dist/_app_/utils/storage-available.js",
+      "./utils/window.js": "./dist/_app_/utils/window.js"
+    }
   }
 }
