@@ -19,13 +19,13 @@
 
       <p>
         <label for="eventInput">Add <a href="https://developer.mozilla.org/en-US/docs/Web/Events" target="_blank" rel="noopener noreferrer">another event</a>:</label>
-        <Input id="eventInput" class="eventInput" @value={{this.newEvent}} @enter={{fn this.addEvent this.newEvent}}/>
+        <Input id="eventInput" class="event-input" @value={{this.newEvent}} @enter={{fn this.addEvent this.newEvent}}/>
       </p>
     </div>
 
     <IdleDisplay />
 
-    <div class="flexContainer">
+    <div class="flex-container">
       {{#each this.eventNames as |event|}}
         <EventDisplay @eventName={{event}} @close={{this.removeEvent}} />
       {{/each}}

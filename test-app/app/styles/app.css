@@ -16,17 +16,14 @@ body {
   flex-direction: row;
   justify-content: space-between;
   max-width: 400px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin: 1rem auto;
 }
 
 .screenshot {
   width: 100%;
 }
 
-.eventName {
+.event-name {
   display: inline-block;
   margin: 5px;
   text-align: center;
@@ -44,27 +41,27 @@ body {
   background-color: lightgray;
 }
 
-.flexContainer {
+.flex-container {
   align-items: flex-start;
   display: flex;
   flex-direction: row;
 }
 
-.eventDisplay {
+.event-display {
   position: relative;
   margin: 5px;
 }
 
-.eventDisplay .eventList {
+.event-display .event-list {
   border: 1px dashed black;
   padding: 5px;
 }
 
-.idleDisplay .idleStatus {
+.idle-display .idle-status {
   font-weight: bold;
 }
 
-.eventInput {
+.event-input {
   border: 1px solid gray;
   border-radius: 2px;
 }
