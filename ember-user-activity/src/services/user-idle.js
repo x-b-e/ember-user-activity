@@ -5,7 +5,7 @@ import { cancel, debounce } from '@ember/runloop';
 import { tracked } from '@glimmer/tracking';
 
 export default class UserIdleService extends EventManagerService {
-  @injectService('ember-user-activity@user-activity')
+  @injectService('user-activity')
   userActivity;
 
   _debouncedTimeout = null;

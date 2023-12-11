@@ -35,7 +35,7 @@ module('Unit | Service | scroll activity', function (hooks) {
     }
 
     let service = this.owner.lookup(
-      'service:ember-user-activity@scroll-activity'
+      'service:scroll-activity'
     );
 
     let scrollEventCount = 0;
@@ -73,7 +73,7 @@ module('Unit | Service | scroll activity', function (hooks) {
     let target = { elem };
 
     let service = this.owner.lookup(
-      'service:ember-user-activity@scroll-activity'
+      'service:scroll-activity'
     );
     service.subscribe(target, elem);
 
@@ -104,7 +104,7 @@ module('Unit | Service | scroll activity', function (hooks) {
     let target = { elem };
 
     let service = this.owner.lookup(
-      'service:ember-user-activity@scroll-activity'
+      'service:scroll-activity'
     );
 
     let subscribedEventCount = 0;
@@ -175,7 +175,7 @@ module('Unit | Service | scroll activity', function (hooks) {
     let target = { elem };
 
     let service = this.owner.lookup(
-      'service:ember-user-activity@scroll-activity'
+      'service:scroll-activity'
     );
 
     let subscribedEventCount = 0;
@@ -216,7 +216,7 @@ module('Unit | Service | scroll activity', function (hooks) {
     }
 
     let service = this.owner.lookup(
-      'service:ember-user-activity@scroll-activity'
+      'service:scroll-activity'
     );
 
     let scrollEventCount = 0;
@@ -254,7 +254,7 @@ module('Unit | Service | scroll activity', function (hooks) {
     let target = { elem };
 
     let service = this.owner.lookup(
-      'service:ember-user-activity@scroll-activity'
+      'service:scroll-activity'
     );
     service.subscribe(target, elem);
 
@@ -285,7 +285,7 @@ module('Unit | Service | scroll activity', function (hooks) {
     let target = { elem };
 
     let service = this.owner.lookup(
-      'service:ember-user-activity@scroll-activity'
+      'service:scroll-activity'
     );
 
     let subscribedEventCount = 0;
@@ -360,7 +360,7 @@ module('Unit | Service | scroll activity', function (hooks) {
     const SCROLL_EVENT_TYPE_DIAGONAL = 'diagonal';
 
     let service = this.owner.lookup(
-      'service:ember-user-activity@scroll-activity'
+      'service:scroll-activity'
     );
 
     let subscribedEventCount = 0;

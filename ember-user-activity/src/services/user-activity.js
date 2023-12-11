@@ -6,7 +6,7 @@ import { inject as injectService } from '@ember/service';
 import storageAvailable from '../utils/storage-available';
 
 export default class UserActivityService extends FastBootAwareEventManagerService {
-  @injectService('ember-user-activity@scroll-activity')
+  @injectService('scroll-activity')
   scrollActivity;
 
   EVENT_THROTTLE;

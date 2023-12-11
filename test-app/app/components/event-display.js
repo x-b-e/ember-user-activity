@@ -5,7 +5,7 @@ import { A } from '@ember/array';
 export default class EventDisplay extends Component {
   events = A();
 
-  @injectService('ember-user-activity@user-activity')
+  @injectService('user-activity')
   userActivity;
 
   constructor() {
