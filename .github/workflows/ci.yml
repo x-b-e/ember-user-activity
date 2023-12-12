@@ -12,8 +12,8 @@ concurrency:
    cancel-in-progress: true
 
 jobs:
-  test:
-    name: "Tests"
+  lint:
+    name: "Lint"
     runs-on: ubuntu-latest
 
     steps:
@@ -26,14 +26,12 @@ jobs:
         with:
           cache: yarn
       - name: Install Dependencies
-        run: yarn install --frozen-lockfile
+        run: yarn install --immutable
       - name: Lint
         run: yarn lint
-      - name: Run Tests
-        run: yarn test
 
-  floating:
-    name: "Floating Dependencies"
+  test:
+    name: "test"
     runs-on: ubuntu-latest
 
     steps:
@@ -46,7 +44,7 @@ jobs:
         with:
           cache: yarn
       - name: Install Dependencies
-        run: yarn install --frozen-lockfile
+        run: yarn install --immutable
       - name: Run Tests
         run: yarn test
 
@@ -77,7 +75,7 @@ jobs:
         with:
           cache: yarn
       - name: Install Dependencies
-        run: yarn install --frozen-lockfile
+        run: yarn install --immutable
       - name: Run Tests
         run: ./node_modules/.bin/ember try:one ${{ matrix.try-scenario }}
         working-directory: test-app
