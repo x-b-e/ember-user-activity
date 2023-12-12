@@ -15,7 +15,7 @@
     "start": "concurrently 'npm:start:*' --restart-after 5000 --prefix-colors cyan,white,yellow",
     "start:addon": "yarn workspace ember-user-activity run start",
     "start:test-app": "yarn workspace test-app run start",
-    "test": "yarn workspaces foreach --all run test",
+    "test": "yarn workspace ember-user-activity build && yarn workspace test-app test",
     "test:ember": "yarn workspaces foreach --all run test:ember",
     "release": "release-it"
   },
