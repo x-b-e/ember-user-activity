@@ -76,6 +76,8 @@ jobs:
           cache: yarn
       - name: Install Dependencies
         run: yarn install --immutable
+      - name: Build addon
+        run: yarn workspace ember-user-activity build
       - name: Run Tests
         run: yarn ember try:one ${{ matrix.try-scenario }}
         working-directory: test-app
