@@ -77,5 +77,5 @@ jobs:
       - name: Install Dependencies
         run: yarn install --immutable
       - name: Run Tests
-        run: ./node_modules/.bin/ember try:one ${{ matrix.try-scenario }}
+        run: yarn ember try:one ${{ matrix.try-scenario }}
         working-directory: test-app
